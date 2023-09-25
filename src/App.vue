@@ -5,13 +5,13 @@
             <div class="bg-red-600 h-screen col-span-2">
                 <Siderbar></Siderbar>
             </div>
-            <div class="bg-green-600 h-screen col-span-6">
-                <MainContent></MainContent>
+            <div>
+                <router-view></router-view>
             </div>
-
+            
         </div>
         <Footer></Footer>
-        <router-view></router-view>
+        
     </div>
 </template>
 
