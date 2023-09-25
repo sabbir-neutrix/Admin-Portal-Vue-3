@@ -8,10 +8,8 @@
             <div>
                 <router-view></router-view>
             </div>
-            
         </div>
         <Footer></Footer>
-        
     </div>
 </template>
 
@@ -19,6 +17,5 @@
 import Header from "./components/layout/Header.vue";
 import Footer from "./components/layout/Footer.vue";
 import Siderbar from "./components/layout/Sidebar.vue";
-import MainContent from "./components/layout/MainContent.vue"
 
 </script>
