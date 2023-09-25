@@ -1,5 +1,5 @@
 <template>
-    <h1>Hello Vue Router</h1>
+    <p class="text-3xl bg-red-600">Hello Vue Router</p>
 </template>
 
 <script setup>
