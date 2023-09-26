@@ -5,9 +5,9 @@ import AddCategory from "../components/category/AddCategory.vue"
 
 const routes = [
     { path: "/", redirect: { name: 'Home' } },
-    { path: "/home", name: "Home", component: Home},
-    { path: "/category", name: "Category", component: Category},
-    { path: "/add-category", name: "AddCategory", component: AddCategory}
+    { path: "/home", name: "Home", component: Home },
+    { path: "/category", name: "Category", component: Category },
+    { path: "/add-category", name: "AddCategory", component: AddCategory }
 ];
 
 const router = createRouter({

@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-10">
         <div class="bg-red-200 col-span-2 hidden md:block">
-                <Siderbar></Siderbar>
+            <Siderbar></Siderbar>
         </div>
         <div class="col-span-10 md:col-span-8">
             <Header></Header>
