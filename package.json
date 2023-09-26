@@ -8,8 +8,6 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@mahdikhashan/vue3-click-outside": "^0.1.2",
-        "click-outside-vue3": "^4.0.1",
         "vue": "^3.3.4",
         "vue-router": "^4.2.5"
     },

@@ -20,15 +20,6 @@
 
 <script setup>
 import { ref } from '@vue/reactivity';
-import clickOutSide from "@mahdikhashan/vue3-click-outside";
-
-const directives = {
-    clickOutSide
-}
-
-const customMethod = () => {
-    console.log("Outside click.");
-}
 
 const buttonStatus = ref(false);
 
