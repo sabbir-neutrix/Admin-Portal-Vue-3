@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <Header></Header>
-        <div class="grid grid-cols-8">
-            <div class="bg-red-200 h-screen col-span-2">
+    <div class="grid grid-cols-10">
+        <div class="bg-red-200 col-span-2 hidden md:block">
                 <Siderbar></Siderbar>
-            </div>
-            <div class="col-span-6 p-4">
+        </div>
+        <div class="col-span-10 md:col-span-8">
+            <Header></Header>
+            <div class="h-[calc(100vh-120px)] overflow-hidden overflow-y-auto p-4">
                 <router-view></router-view>
             </div>
+            <Footer></Footer>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
