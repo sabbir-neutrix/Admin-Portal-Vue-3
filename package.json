@@ -1,22 +1,23 @@
 {
-  "name": "admin-portal",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "v-click-outside": "^3.2.0",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.3.4",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.30",
-    "tailwindcss": "^3.3.3",
-    "vite": "^4.4.9"
-  }
+    "name": "admin-portal",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@mahdikhashan/vue3-click-outside": "^0.1.2",
+        "click-outside-vue3": "^4.0.1",
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.5"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.3.4",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.30",
+        "tailwindcss": "^3.3.3",
+        "vite": "^4.4.9"
+    }
 }
