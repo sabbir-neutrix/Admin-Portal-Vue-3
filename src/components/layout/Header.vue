@@ -3,7 +3,7 @@
         <div class="">
             <div class="flex justify-end items-center _container gap-3">
                 <img src="../../../public/images/test.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full" />
-                <div class="relative" v-click-outside="closeToggle">
+                <div class="relative">
                     <button @click="toggleStatus" class="font-semibold">Admin</button>
                     <div v-if="buttonStatus == true" class="absolute top-[40px] left-[-150px] bg-white border rounded-md drop-shadow overflow-hidden z-20 w-[200px]">
                         <div>
@@ -21,15 +21,14 @@
 <script setup>
 import { ref } from '@vue/reactivity';
 
+
+
 const buttonStatus = ref(false);
 
 const toggleStatus = () => {
     buttonStatus.value = !buttonStatus.value;
 }
-const closeToggle = () => {
-  if (buttonStatus.value) {
-    buttonStatus.value = false;
-  }
-};
+
+
 
 </script>
