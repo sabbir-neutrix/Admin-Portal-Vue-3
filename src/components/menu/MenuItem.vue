@@ -1,6 +1,6 @@
 <template>
     <div v-for="(buttons, index) in buttons" :key="index">
-            <router-link :to="buttons.url" @click="sendDataToHeader">
+            <router-link :to="buttons.url" @click="$emit('drawerFlag', false)">
               <button class="text-start w-full p-2 mb-2 text-black hover:text-blue-400">
                 <span class="me-2"><font-awesome-icon :icon="buttons.icon"/></span>{{buttons.title}}
               </button>
@@ -28,16 +28,16 @@
 <script setup>
 import { ref, inject } from 'vue';
 const buttonStatus = ref(false);
-const emit = inject('emit');
+// const emit = inject('emit');
 
 const toggleStatus = () => {
     buttonStatus.value = !buttonStatus.value;
 };
 
-const sendDataToHeader = () => {
-    const drawer = false;
-    emit('drawerData', drawer);
-};
+// const sendDataToHeader = () => {
+//     const drawer = false;
+//     emit('drawerData', drawer);
+// };
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown,faChevronUp,faChevronRight,faTableCells,faClock,faShapes,faGears,faBookmark } from '@fortawesome/free-solid-svg-icons'

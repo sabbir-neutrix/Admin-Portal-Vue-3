@@ -2,14 +2,14 @@
     <div class="bg-slate-200 py-3 px-6 flex justify-between md:justify-end items-center">
         <div class="block md:hidden">
             <button @click="drawer = true" class="text-2xl"><font-awesome-icon icon="fa-solid fa-bars" /></button>
-            <div v-if="drawer" class="absolute top-[0px] left-[0px] bg-white border z-20 h-[100vh] w-[80%]">
+            <div v-if="drawer == true" class="absolute top-[0px] left-[0px] bg-white border z-20 h-[100vh] w-[80%]">
                 <div class="flex justify-between items-center p-4">
                     <p class="text-xl font-bold">Super Admin</p>
                     <button @click="drawer = false"><font-awesome-icon icon="fa-solid fa-xmark" /></button>
                 </div>
                 <hr />
                 <div class="p-4">
-                    <MenuItem @drawerData="handleDrawerData"></MenuItem>
+                    <MenuItem @drawerFlag="handleDrawerData"></MenuItem>
                 </div>
             </div>
         </div>
@@ -56,7 +56,6 @@ const modal = ref(false);
 
 const closeModal = () => {
     modal.value = false;
-    console.log("Close modal: ", modal.value);
 }
 
 /* Dropdown Menu Event */
@@ -70,6 +69,6 @@ const receivedDrawerData = ref('');
 
 const handleDrawerData = (data) => {
     receivedDrawerData.value = data;
-    console.log("Drawer Status: ", receivedDrawerData.value)
+    drawer.value = receivedDrawerData.value;
 }
 </script>
