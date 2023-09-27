@@ -8,6 +8,8 @@
             <p class="text-xs md:text-sm font-semibold">Add Service</p>
         </div>
         <form class="border rounded-md p-4">
+            
+            <!-- <button><font-awesome-icon icon="fa-solid fa-user-secret" /> Test</button> -->
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="border-r-0 md:border-r-2 pe-0 md:pe-6">
                     <div class="mb-3 md:mb-6">
@@ -56,3 +58,8 @@
         </form>
     </div>
 </template>
+<script setup>
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faUserSecret,faChevronDown } from '@fortawesome/free-solid-svg-icons'
+// library.add(faUserSecret,faChevronDown)
+</script>
