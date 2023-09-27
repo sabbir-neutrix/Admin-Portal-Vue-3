@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../components/Home.vue";
-import Category from "../components/category/Category.vue";
-import AddCategory from "../components/category/AddCategory.vue";
-import Employee from "../components/employee/Employee.vue";
-import AddEmployee from "../components/employee/AddEmployee.vue";
-import Service from "../components/service/Service.vue";
-import AddService from "../components/service/AddService.vue"
+import Home from "../pages/home/Home.vue";
+import Category from "../pages/category/Category.vue";
+import AddCategory from "../pages/category/AddCategory.vue";
+import Employee from "../pages/employee/Employee.vue";
+import AddEmployee from "../pages/employee/AddEmployee.vue";
+import Service from "../pages/service/Service.vue";
+import AddService from "../pages/service/AddService.vue";
 
 const routes = [
     { path: "/", redirect: { name: 'Home' } },

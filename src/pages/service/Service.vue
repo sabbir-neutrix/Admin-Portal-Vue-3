@@ -17,7 +17,7 @@
     </div>
 </template>
 <script setup>
-import CardWithoutImage from "../../composables/common-card/CardWithoutImage.vue";
+import CardWithoutImage from "../../components/common-card/CardWithoutImage.vue";
 const employees = [
     {
         sl:1,

@@ -19,7 +19,7 @@
 
 <script setup>
 import { ref } from '@vue/reactivity';
-import CardWithImage from '../../composables/common-card/CardWithImage.vue';
+import CardWithImage from '../../components/common-card/CardWithImage.vue';
 
 const categories = ref([
     {
