@@ -1,7 +1,9 @@
 <template>
-    <div class="bg-slate-200 py-3">
-        <div>
-            <div class="flex justify-end items-center _container gap-3">
+    <div class="bg-slate-200 py-3 px-6 flex justify-between md:justify-end items-center">
+            <div class="block md:hidden">
+                <button class="text-2xl"><font-awesome-icon icon="fa-solid fa-bars" /></button>
+            </div>
+            <div class="flex justify-normal items-center gap-3">
                 <img src="../../../public/images/demo.jpg" class="w-[40px] h-[40px] object-cover rounded-full"/>
                 <div class="relative">
                     <button @click="modal = true" v-on-click-outside="closeModal" class="font-semibold">Admin</button>
@@ -14,14 +16,15 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </template>
 
 <script setup>
 import { ref } from '@vue/reactivity';
 import { vOnClickOutside } from '@vueuse/components';
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {faChevronDown,faBars } from '@fortawesome/free-solid-svg-icons'
+library.add(faChevronDown,faBars)
 /* On Click Outside Event */
 const modal = ref(false);
 
