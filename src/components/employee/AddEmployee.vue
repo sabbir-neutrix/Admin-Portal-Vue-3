@@ -1,5 +1,5 @@
 <template>
-    <div class="drop-shadow bg-white p-4 md:p-8">
+    <div class="drop-shadow bg-white p-4 md:p-6">
         <div class="flex justify-start items-center gap-3 mb-8">
             <p class="text-xs md:text-sm font-semibold">Home</p>
             <p class="text-xs md:text-sm font-semibold">></p>
@@ -7,7 +7,7 @@
             <p class="text-xs md:text-sm font-semibold">></p>
             <p class="text-xs md:text-sm font-semibold">Add Employee</p>
         </div>
-        <form>
+        <form class="border rounded-md p-4">
             <div class="mb-3 md:mb-6">
                 <p class="mb-2">Employee Name <span class="text-red-600">*</span></p>
                 <input type="text" class="outline-none border w-full p-2 rounded-md"/>
