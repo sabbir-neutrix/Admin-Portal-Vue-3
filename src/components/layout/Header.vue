@@ -1,11 +1,15 @@
 <template>
     <div class="bg-slate-200 py-3 px-6 flex justify-between md:justify-end items-center">
         <div class="block md:hidden">
-            <button class="text-2xl"><font-awesome-icon icon="fa-solid fa-bars" /></button>
-            <div v-if="modal"
-                class="absolute top-[40px] left-[-120px] bg-white border rounded-md drop-shadow overflow-hidden z-20 w-[200px]">
-                <div>
-                    <p>TEST</p>
+            <button @click="drawer = true" class="text-2xl"><font-awesome-icon icon="fa-solid fa-bars" /></button>
+            <div v-if="drawer" class="absolute top-[0px] left-[0px] bg-white border z-20 h-[100vh] w-[80%]">
+                <div class="flex justify-between items-center p-4">
+                    <p class="text-xl font-bold">Super Admin</p>
+                    <button @click="drawer = false"><font-awesome-icon icon="fa-solid fa-xmark" /></button>
+                </div>
+                <hr />
+                <div class="p-4">
+                    <MenuItem />
                 </div>
             </div>
         </div>
@@ -35,12 +39,18 @@
 </template>
 
 <script setup>
+import MenuItem from "../menu/menuItem.vue"
 import { ref } from '@vue/reactivity';
 import { vOnClickOutside } from '@vueuse/components';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronDown, faBars, faUser, faLock, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
-library.add(faChevronDown, faBars, faUser, faLock, faRightFromBracket)
+import { faChevronDown, faBars, faUser, faLock, faRightFromBracket, faXmark } from '@fortawesome/free-solid-svg-icons'
+library.add(faChevronDown, faBars, faUser, faLock, faRightFromBracket, faXmark)
 /* On Click Outside Event */
+const drawer = ref(false)
+// const closeDrawer = () => {
+//     drawer.value = false;
+//     console.log("Close drawer: ", drawer.value);
+// }
 const modal = ref(false);
 
 const closeModal = () => {
