@@ -9,7 +9,7 @@
                 </div>
                 <hr />
                 <div class="p-4">
-                    <MenuItem :drawer = "drawer"/>
+                    <MenuItem @drawerData="handleDrawerData"></MenuItem>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import MenuItem from "../menu/menuItem.vue"
+import MenuItem from "../menu/MenuItem.vue"
 import { ref } from '@vue/reactivity';
 import { vOnClickOutside } from '@vueuse/components';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -64,5 +64,12 @@ const buttonStatus = ref(false);
 
 const toggleStatus = () => {
     buttonStatus.value = !buttonStatus.value;
+}
+
+const receivedDrawerData = ref('');
+
+const handleDrawerData = (data) => {
+    receivedDrawerData.value = data;
+    console.log("Drawer Status: ", receivedDrawerData.value)
 }
 </script>
