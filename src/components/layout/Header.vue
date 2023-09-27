@@ -9,7 +9,7 @@
                 </div>
                 <hr />
                 <div class="p-4">
-                    <MenuItem />
+                    <MenuItem :drawer = "drawer"/>
                 </div>
             </div>
         </div>
@@ -47,6 +47,7 @@ import { faChevronDown, faBars, faUser, faLock, faRightFromBracket, faXmark } fr
 library.add(faChevronDown, faBars, faUser, faLock, faRightFromBracket, faXmark)
 /* On Click Outside Event */
 const drawer = ref(false)
+
 // const closeDrawer = () => {
 //     drawer.value = false;
 //     console.log("Close drawer: ", drawer.value);

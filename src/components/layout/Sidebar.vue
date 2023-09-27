@@ -11,9 +11,4 @@
 
 <script setup>
 import MenuItem from "../menu/menuItem.vue"
-
-
-
-
-
 </script>

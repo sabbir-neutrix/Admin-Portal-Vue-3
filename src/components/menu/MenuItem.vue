@@ -28,10 +28,10 @@
 <script setup>
 import { ref } from '@vue/reactivity';
 const buttonStatus = ref(false);
-
+const props = 
 const toggleStatus = () => {
     buttonStatus.value = !buttonStatus.value;
-}
+};
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown,faChevronUp,faChevronRight,faTableCells,faClock,faShapes,faGears,faBookmark } from '@fortawesome/free-solid-svg-icons'
