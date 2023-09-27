@@ -17,6 +17,10 @@
 </template>
 
 <script setup>
-const props = defineProps(['categories']);
-
+const props = defineProps({
+    categories: {
+        type: Object,
+        required: true
+    }
+});
 </script>

@@ -18,82 +18,83 @@
 </template>
 
 <script setup>
+import { ref } from '@vue/reactivity';
 import CardWithImage from '../../composables/common-card/CardWithImage.vue';
 
-const categories = [
+const categories = ref([
     {
         title: "Category 1",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 2",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 3",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 4",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 5",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 6",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 7",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 8",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 9",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 10",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 11",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     },
     {
         title: "Category 12",
         description: "Lorem ipsum dolor sit amet consectetur",
         additionalInfo: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
-        image: "../../../public/images/test.jpg",
+        image: "../../../public/images/demo.jpg",
     }
-]
+]);
 </script>
 
 

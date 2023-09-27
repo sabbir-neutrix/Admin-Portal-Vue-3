@@ -12,12 +12,12 @@
       </div>
         <hr class="my-6 md:my-10 border-b-2" />
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <CardWithOutImage :employees="employees"></CardWithOutImage>
+            <CardWithoutImage :employees="employees"></CardWithoutImage>
         </div>
     </div>
 </template>
 <script setup>
-import CardWithOutImage from '../../composables/common-card/CardWithOutImage.vue';
+import CardWithoutImage from "../../composables/common-card/CardWithoutImage.vue";
 const employees = [
     {
         sl:1,
