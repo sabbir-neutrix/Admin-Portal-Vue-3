@@ -1,6 +1,6 @@
 <template>
     <div v-for="(buttons, index) in buttons" :key="index">
-            <router-link :to="buttons.url" @click="$emit('drawerFlag', false)">
+            <router-link :to="buttons.url" @click="sendDrawerFlag">
               <button class="text-start w-full p-2 mb-2 text-black hover:text-blue-400">
                 <span class="me-2"><font-awesome-icon :icon="buttons.icon"/></span>{{buttons.title}}
               </button>
@@ -28,7 +28,11 @@
 <script setup>
 import { ref, inject } from 'vue';
 const buttonStatus = ref(false);
-// const emit = inject('emit');
+const emit = defineEmits(['drawerFlag']);
+
+const sendDrawerFlag = () => {
+    emit('drawerFlag', false);
+}
 
 const toggleStatus = () => {
     buttonStatus.value = !buttonStatus.value;
