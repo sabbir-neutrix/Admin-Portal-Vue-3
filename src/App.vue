@@ -5,7 +5,7 @@
         </div>
         <div class="col-span-10 md:col-span-8">
             <Header></Header>
-            <div class="h-[calc(100vh-118px)] overflow-hidden overflow-y-auto p-4">
+            <div class="h-[calc(100vh-125px)] overflow-hidden overflow-y-auto p-4">
                 <router-view></router-view>
             </div>
             <Footer></Footer>
