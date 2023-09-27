@@ -4,12 +4,14 @@
           <h1 class="text-3xl font-semibold">Super Admin</h1>
         </div>
         <div class="h-[calc(100vh-100px)] overflow-hidden overflow-y-auto">
-          <div>
-              <button v-for="(buttons, index) in buttons" :key="index" class="text-start w-full p-2 mb-4 text-black hover:text-blue-400">
+          <div v-for="(buttons, index) in buttons" :key="index">
+            <router-link :to="buttons.url">
+              <button class="text-start w-full p-2 mb-2 text-black hover:text-blue-400">
                 <span class="me-2"><font-awesome-icon :icon="buttons.icon"/></span>{{buttons.title}}
               </button>
+            </router-link>
           </div>
-          <div class="mb-4">
+          <div class="mb-2">
             <button @click="toggleStatus" class="flex justify-between items-center w-full p-2 text-black hover:text-blue-400">
               <p class=""><span class="me-2"><font-awesome-icon icon="fa-solid fa-gears" /></span>Services</p>
               <p v-if="buttonStatus == true"><font-awesome-icon icon="fa-solid fa-chevron-up" /></p>
@@ -50,22 +52,22 @@ const toggleStatus = () => {
         {
           title: "Dashboard",
           icon: "fa-solid fa-table-cells",
-          url: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
+          url: "/",
         },
         {
           title: "Schedule",
           icon: "fa-solid fa-clock",
-          url: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
+          url: "/",
         },
         {
           title: "Manage Booking",
           icon: "fa-solid fa-bookmark",
-          url: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
+          url: "/service",
         },
         {
           title: "Category",
           icon: "fa-solid fa-shapes",
-          url: "Laborum deleniti voluptatum distinctio quibusdam iusto, rem quasi in asperiores",
+          url: "/category",
         },
       ]
 </script>
