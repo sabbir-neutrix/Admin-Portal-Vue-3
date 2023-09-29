@@ -2,13 +2,14 @@
     <div v-for="(category, index) in categories" :key="index"
         class="border rounded-md overflow-hidden bg-slate-100">
         <div class="flex justify-between items-center p-3">
-            <div class="w-[70%]">
-                <p class="text-base md:text-xl font-semibold line-clamp-2">{{ category.title }}</p>
+            <div class="w-[60%]">
+                <p class="text-sm text-slate-600 mb-2">Digital Stragegist</p>
+                <p class="text-base md:text-xl font-semibold line-clamp-2">Nicola Pierson</p>
                 <p class="text-sm md:text-base font-medium leading-5 mb-1 md:mb-2 line-clamp-2">{{ category.description }}</p>
                 <p class="text-xs md:text-sm leading-5 line-clamp-2">{{ category.additionalInfo }}</p>
             </div>
-            <div class="w-[30%]">
-                <img :src="category.image" alt="" class="w-[70px] h-[70px] object-cover rounded-full" />
+            <div class="w-[40%]">
+                <img :src="category.image" alt="" class="w-[90px] h-[90px] object-cover rounded-full mx-auto" />
             </div>
         </div>
         <div class="flex justify-end items-center gap-2 mt-3 bg-slate-300 px-3 py-2">
