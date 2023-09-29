@@ -4,11 +4,11 @@ import App from './App.vue';
 import './index.css';
 import router from './routes/index';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
 import moment from 'moment';
-import server from '../config/server.json';
 import api from '../config/api.json';
+import { ref } from 'vue';
+
+const app = createApp(App);
 
 const filters = {
     formatDateTime(date) {
@@ -22,10 +22,31 @@ const filters = {
     }
 };
 
-const app = createApp(App);
+/* Configure the Host URL and Server URL */
+import server from '../config/server.json';
+
+const hostURL = ref('');
+const serverURL = ref('');
+
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    hostURL.value = server.STAGING_HOST;
+    serverURL.value = server.STAGING_SERVER_HOST;
+} else {
+    hostURL.value = server.HOST;
+    serverURL.value = server.SERVER_HOST;
+}
+/* Configure the Host URL and Server URL */
+
+/* Configure the Axios */
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
 app.use(VueAxios, axios);
 app.provide('axios', app.config.globalProperties.axios);
-app.provide('filters', app.config.globalProperties.filters);
+/* Configure the Axios */
+
+// app.provide('filters', app.config.globalProperties.filters);
+// app.provide('api', app.config.globalProperties.api);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.use(router);
 app.mount('#app');

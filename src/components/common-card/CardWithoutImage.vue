@@ -9,9 +9,9 @@
             </div>
             <div class="text-end">
                 <p class="font-semibold">{{ employee.sl }}</p>
-                <p>{{employee.name}}</p>
+                <p>{{ employee.name }}</p>
                 <p>{{ employee.email }}</p>
-                <p>{{employee.phone}}</p>
+                <p>{{ employee.phone }}</p>
             </div>
         </div>
         <div class="flex justify-end items-center gap-3">

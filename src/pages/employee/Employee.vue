@@ -13,45 +13,23 @@
             </div>
         </div>
         <hr class="my-6 md:my-10 border-b-2"/>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div v-if="error">
+            Error Encountered: {{ error.message }}
+        </div>
+        <div v-else-if="employees" class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <CardWithoutImage :employees="employees"></CardWithoutImage>
+        </div>
+        <div v-else>
+            Loading...
         </div>
     </div>
 </template>
-<script setup>
-import { ref } from 'vue';
-import CardWithoutImage from "../../components/common-card/CardWithoutImage.vue";
 
-const employees = [
-    {
-        sl: 1,
-        name: 'Test',
-        email: 'test@gmail.com',
-        phone: '1234567'
-    },
-    {
-        sl: 2,
-        name: 'Test',
-        email: 'test@gmail.com',
-        phone: '1234567'
-    },
-    {
-        sl: 3,
-        name: 'Test',
-        email: 'test@gmail.com',
-        phone: '1234567'
-    },
-    {
-        sl: 4,
-        name: 'Test',
-        email: 'test@gmail.com',
-        phone: '1234567'
-    },
-    {
-        sl: 5,
-        name: 'Test',
-        email: 'test@gmail.com',
-        phone: '1234567'
-    },
-]
+<script setup>
+import { ref, onMounted } from 'vue';
+import CardWithoutImage from "../../components/common-card/CardWithoutImage.vue";
+import { useFetch } from "../../composables/api/use-api";
+
+const { employees, error } = useFetch();
+
 </script>
