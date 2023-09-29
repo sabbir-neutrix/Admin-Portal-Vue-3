@@ -60,7 +60,7 @@ const buttons = [
           url: "/",
         },
         {
-          title: "Manage Booking",
+          title: "Services",
           icon: "fa-solid fa-bookmark",
           url: "/service",
         },
@@ -68,6 +68,11 @@ const buttons = [
           title: "Category",
           icon: "fa-solid fa-shapes",
           url: "/category",
+        },
+        {
+          title: "Contact",
+          icon: "fa-solid fa-shapes",
+          url: "/contact",
         },
       ]
 </script>
