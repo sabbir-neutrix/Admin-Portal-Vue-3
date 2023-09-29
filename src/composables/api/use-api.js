@@ -1,12 +1,12 @@
 import { ref } from "vue";
 
-export function useFetch() {
+export function useFetch(url) {
     const employees = ref(null);
     const error = ref(null);
 
     async function doFetch() {
         try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users');
+            const response = await fetch(url);
             employees.value = await response.json();
         } catch(e) {
             error.value = e;
