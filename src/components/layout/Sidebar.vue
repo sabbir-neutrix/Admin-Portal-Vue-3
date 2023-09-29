@@ -1,9 +1,10 @@
 <template>
-    <div class="p-4">
-        <div class="mb-7">
+    <div class="bg-pc text-white">
+        <div class="px-4 py-[14px]">
           <h1 class="text-3xl font-semibold">Super Admin</h1>
         </div>
-        <div class="h-[calc(100vh-100px)] overflow-hidden overflow-y-auto">
+        <hr/>
+        <div class="h-[calc(100vh-100px)] overflow-hidden overflow-y-auto p-4">
           <MenuItem></MenuItem>
         </div>
     </div>

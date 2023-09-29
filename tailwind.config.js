@@ -3,7 +3,11 @@ module.exports = {
     purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     darkMode: false,
     theme: {
-        extend: {}
+        extend: {
+            colors:{
+                pc:"#343A40" // primary gray color
+            }
+        }
     },
     variants: {
         extend: {}

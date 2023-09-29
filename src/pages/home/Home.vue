@@ -6,10 +6,10 @@
         <CardTwo :cardTwoData="cardTwoData"></CardTwo>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="bg-slate-200 m-1">
+        <div class="bg-[#343A40] m-1 text-white rounded-md p-2">
             <p>Chart 1</p>
         </div>
-        <div class="bg-slate-200 m-1">
+        <div class="bg-[#343A40] m-1 text-white rounded-md p-2">
             <p>Chart 2</p>
         </div>
         <div>
@@ -22,7 +22,8 @@
 import CardOne from './components/CardOne.vue';
 import CardTwo from './components/CardTwo.vue';
 import CardThree from './components/CardThree.vue'
-
+// import Chart from 'chart.js/auto';
+// import { getRelativePosition } from 'chart.js/helpers';
 const cardOneData = [
     {
         sl: 1,
@@ -50,28 +51,28 @@ const cardTwoData = [
         title: 'CPU Traffic',
         subTitle: '10%',
         icon: 'fa-solid fa-gear',
-        background:'bg-blue-300',
+        background:'bg-[#17A2B8]',
     },
     {
         sl: 2,
         title: 'Likes',
         subTitle: '41,410',
         icon: 'fa-solid fa-thumbs-up',
-        background:'bg-red-500',
+        background:'bg-[#DC3545]',
     },
     {
         sl: 3,
         title: 'Sales',
         subTitle: '760',
         icon: 'fa-solid fa-cart-shopping',
-        background:'bg-green-400',
+        background:'bg-[#28A745]',
     },
     {
         sl: 4,
         title: 'New Members',
         subTitle: '2000',
         icon: 'fa-solid fa-user-group',
-        background:'bg-yellow-400',
+        background:'bg-[#FFC107]',
     },
     
 ]
@@ -81,31 +82,44 @@ const cardThreeData = [
         title: 'CPU Traffic',
         subTitle: '10%',
         icon: 'fa-solid fa-gear',
-        background:'bg-blue-300',
+        background:'bg-[#DC3545]',
     },
     {
         sl: 2,
         title: 'Likes',
         subTitle: '41,410',
         icon: 'fa-solid fa-thumbs-up',
-        background:'bg-red-500',
+        background:'bg-[#28A745]',
     },
     {
         sl: 3,
         title: 'Sales',
         subTitle: '760',
         icon: 'fa-solid fa-cart-shopping',
-        background:'bg-green-400',
+        background:'bg-[#FFC107]',
     },
     {
         sl: 4,
         title: 'New Members',
         subTitle: '2000',
         icon: 'fa-solid fa-user-group',
-        background:'bg-yellow-400',
+        background:'bg-[#17A2B8]',
     },
     
 ]
+// const chart = new Chart(ctx, {
+//   type: 'line',
+//   data: data,
+//   options: {
+//     onClick: (e) => {
+//       const canvasPosition = getRelativePosition(e, chart);
+
+//       // Substitute the appropriate scale IDs
+//       const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
+//       const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
+//     }
+//   }
+// });
 
 import { library } from '@fortawesome/fontawesome-svg-core';
     import { faGear,faThumbsUp,faCartShopping,faUserGroup} from '@fortawesome/free-solid-svg-icons'
