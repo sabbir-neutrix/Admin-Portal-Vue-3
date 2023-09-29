@@ -3,7 +3,7 @@
         <div class="col-span-2 hidden md:block drop-shadow-lg">
             <Siderbar></Siderbar>
         </div>
-        <div class="col-span-10 md:col-span-9">
+        <div class="col-span-11 md:col-span-9">
             <Header></Header>
             <div class="h-[calc(100vh-125px)] overflow-hidden overflow-y-auto p-4 bg-[#454D55]">
                 <router-view></router-view>

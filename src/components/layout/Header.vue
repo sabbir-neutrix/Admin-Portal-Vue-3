@@ -2,7 +2,7 @@
     <div class="bg-pc py-3 px-6 flex justify-between md:justify-end items-center text-white">
         <div class="block md:hidden">
             <button @click="drawer = true" class="text-2xl"><font-awesome-icon icon="fa-solid fa-bars" /></button>
-            <div v-if="drawer == true" class="absolute top-[0px] left-[0px] bg-pc drop-shadow-lg z-20 h-[100vh] w-[80%]">
+            <div v-if="drawer == true" class="absolute top-[0px] left-[0px] bg-pc drop-shadow-lg z-20 h-[100vh] w-[60%]">
                 <div class="flex justify-between items-center p-4">
                     <p class="text-xl font-bold">Super Admin</p>
                     <button @click="drawer = false"><font-awesome-icon icon="fa-solid fa-xmark" /></button>
