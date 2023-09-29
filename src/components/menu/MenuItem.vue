@@ -1,26 +1,26 @@
 <template>
     <div v-for="(buttons, index) in buttons" :key="index">
             <router-link :to="buttons.url" @click="sendDrawerFlag">
-              <button class="text-start w-full p-2 mb-2 text-black hover:text-blue-400">
+              <button class="text-start w-full p-2 mb-2 text-[#CDD2D8] hover:text-blue-400">
                 <span class="me-2"><font-awesome-icon :icon="buttons.icon"/></span>{{buttons.title}}
               </button>
             </router-link>
           </div>
           <div class="mb-2">
-            <button @click="toggleStatus" class="flex justify-between items-center w-full p-2 text-black hover:text-blue-400">
+            <button @click="toggleStatus" class="flex justify-between items-center w-full p-2 text-[#CDD2D8] hover:text-blue-400">
               <p class=""><span class="me-2"><font-awesome-icon icon="fa-solid fa-gears" /></span>Services</p>
               <p v-if="buttonStatus == true"><font-awesome-icon icon="fa-solid fa-chevron-up" /></p>
               <p v-else><font-awesome-icon icon="fa-solid fa-chevron-down" /></p>
             </button>
             <div v-if="buttonStatus == true" class="px-4 py-2">
               <div>
-                <button class="text-sm mb-2 text-black hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
+                <button class="text-sm mb-2 text-[#CDD2D8] hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
               </div>
               <div>
-                <button class="text-sm mb-2 text-black hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
+                <button class="text-sm mb-2 text-[#CDD2D8] hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
               </div>
               <div>
-                <button class="text-sm mb-2 text-black hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
+                <button class="text-sm mb-2 text-[#CDD2D8] hover:text-blue-400 w-full text-start"><span class="me-2"><font-awesome-icon class="text-xs" icon="fa-solid fa-chevron-right" /></span>Button1</button>
               </div>
             </div>
           </div>
