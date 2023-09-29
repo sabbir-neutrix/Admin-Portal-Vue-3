@@ -26,10 +26,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, inject } from 'vue';
 import CardWithoutImage from "../../components/common-card/CardWithoutImage.vue";
 import { useFetch } from "../../composables/api/use-api";
 
-const { employees, error } = useFetch();
+const api = inject('api');
+const url = api.user.requestUrl;
+const { employees, error } = useFetch(url);
 
 </script>

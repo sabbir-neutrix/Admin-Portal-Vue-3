@@ -2,14 +2,18 @@ import './assets/main.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 import './index.css';
-import router from './routes/index';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import moment from 'moment';
-import api from '../config/api.json';
 import { ref } from 'vue';
 
 const app = createApp(App);
 
+/* Configure the API JSON File */
+import api from '../config/api.json';
+
+app.provide('api', api);
+/* Configure the API JSON File */
+
+/* Configure the Moment JS */
+import moment from 'moment';
 const filters = {
     formatDateTime(date) {
         return moment(String(date)).format('MM/DD/YYYY hh:mm:ss A');
@@ -21,6 +25,7 @@ const filters = {
         return moment(String(date)).format('MM-DD-YYYY');
     }
 };
+/* Configure the Moment JS */
 
 /* Configure the Host URL and Server URL */
 import server from '../config/server.json';
@@ -45,8 +50,16 @@ app.use(VueAxios, axios);
 app.provide('axios', app.config.globalProperties.axios);
 /* Configure the Axios */
 
-// app.provide('filters', app.config.globalProperties.filters);
-// app.provide('api', app.config.globalProperties.api);
+/* Configure the Font Awesome Icon */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 app.component('font-awesome-icon', FontAwesomeIcon);
+/* Configure the Font Awesome Icon */
+
+/* Configure Vue Router */
+import router from './routes/index';
+
 app.use(router);
+/* Configure Vue Router */
+
 app.mount('#app');

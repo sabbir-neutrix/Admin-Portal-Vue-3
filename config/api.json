@@ -1,5 +1,5 @@
 {
     "user": {
-        "adminListUrl": "api/v1/users?userType=admin"
+        "requestUrl": "https://jsonplaceholder.typicode.com/users"
     }
 }
