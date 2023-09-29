@@ -1,6 +1,6 @@
 <template>
-    <div v-for="(cardTwoData, index) in cardTwoData" :key="index" class="bg-pc rounded-md cursor-pointer p-2 flex justify-start gap-2 text-white">
-        <div :class="cardTwoData.background" class="rounded-md">
+    <div v-for="(cardTwoData, index) in cardTwoData" :key="index" class="bg-pc rounded-md cursor-pointer p-2 flex justify-start gap-2 text-white drop-shadow">
+        <div :class="cardTwoData.background" class="rounded-md drop-shadow">
             <button class="py-1 md:py-2 px-2 md:px-4 text-2xl text-white"><font-awesome-icon :icon="cardTwoData.icon" /></button>
         </div>
         <div>
