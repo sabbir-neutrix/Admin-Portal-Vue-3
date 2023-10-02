@@ -1,17 +1,17 @@
 <template>
-    <div v-for="(employee, index) in employees" :key="index" class="border rounded-md p-3">
+    <div v-for="(item, index) in data" :key="index" class="border rounded-md p-3">
         <div class="flex justify-between items-center mb-4">
             <div>
-                <p class="font-semibold">SL</p>
+                <p class="font-semibold">Sl</p>
                 <p>Name</p>
                 <p>Email</p>
                 <p>Phone</p>
             </div>
             <div class="text-end">
-                <p class="font-semibold">{{ employee.sl }}</p>
-                <p>{{ employee.name }}</p>
-                <p>{{ employee.email }}</p>
-                <p>{{ employee.phone }}</p>
+                <p class="font-semibold">{{ index+1 }}</p>
+                <p>{{ item.firstName + ' ' + item.lastName }}</p>
+                <p>{{ item.email }}</p>
+                <p>{{ item.phone }}</p>
             </div>
         </div>
         <div class="flex justify-end items-center gap-3">
@@ -21,5 +21,5 @@
     </div>
 </template>
 <script setup>
-    const props = defineProps(['employees']);
+    const props = defineProps(['data']);
 </script>

@@ -14,6 +14,7 @@ app.provide('api', api);
 
 /* Configure the Moment JS */
 import moment from 'moment';
+
 const filters = {
     formatDateTime(date) {
         return moment(String(date)).format('MM/DD/YYYY hh:mm:ss A');
@@ -25,6 +26,8 @@ const filters = {
         return moment(String(date)).format('MM-DD-YYYY');
     }
 };
+
+app.provide('filters', filters);
 /* Configure the Moment JS */
 
 /* Configure the Host URL and Server URL */
@@ -40,6 +43,9 @@ if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
     hostURL.value = server.HOST;
     serverURL.value = server.SERVER_HOST;
 }
+
+app.provide('hostURL', hostURL.value);
+app.provide('serverURL', serverURL.value);
 /* Configure the Host URL and Server URL */
 
 /* Configure the Axios */
@@ -47,7 +53,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 
 app.use(VueAxios, axios);
-app.provide('axios', app.config.globalProperties.axios);
+app.provide('axios', axios);
 /* Configure the Axios */
 
 /* Configure the Font Awesome Icon */

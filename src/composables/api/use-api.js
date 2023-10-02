@@ -1,19 +1,27 @@
-import { ref } from "vue";
+import { ref, inject } from "vue";
+import { authHeader } from "../auth";
 
-export function useFetch(url) {
-    const employees = ref(null);
-    const error = ref(null);
+export async function useFetch(url) {
+    const axios = inject('axios');
+    let dataList = [];
+    let error = "";
 
-    async function doFetch() {
-        try {
-            const response = await fetch(url);
-            employees.value = await response.json();
-        } catch(e) {
-            error.value = e;
+    const config = {
+        method: "GET",
+        url: url,
+        headers: {
+            "Authorization": authHeader()
         }
+    };
+
+    try {
+        const response = await axios(config);
+        if (response.status === 200) {
+            dataList = await response.data.data;
+        } 
+    } catch(e) {
+        error = e;
     }
 
-    doFetch();
-
-    return { employees, error };
+    return { dataList, error };
 }

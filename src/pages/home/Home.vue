@@ -7,7 +7,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="bg-[#343A40] m-1 text-white rounded-md p-2">
-            <p>Chart 1</p>
+            <DoughnutChart :chartData="chartData"/>
         </div>
         <div class="bg-[#343A40] m-1 text-white rounded-md p-2">
             <p>Chart 2</p>
@@ -107,21 +107,26 @@ const cardThreeData = [
     },
     
 ]
-// const chart = new Chart(ctx, {
-//   type: 'line',
-//   data: data,
-//   options: {
-//     onClick: (e) => {
-//       const canvasPosition = getRelativePosition(e, chart);
 
-//       // Substitute the appropriate scale IDs
-//       const dataX = chart.scales.x.getValueForPixel(canvasPosition.x);
-//       const dataY = chart.scales.y.getValueForPixel(canvasPosition.y);
-//     }
-//   }
-// });
 
 import { library } from '@fortawesome/fontawesome-svg-core';
     import { faGear,faThumbsUp,faCartShopping,faUserGroup} from '@fortawesome/free-solid-svg-icons'
-    library.add(faGear,faThumbsUp,faCartShopping,faUserGroup)
+    library.add(faGear,faThumbsUp,faCartShopping,faUserGroup);
+
+import { DoughnutChart } from 'vue-chart-3';
+import { Chart, registerables } from "chart.js";
+
+Chart.register(...registerables);
+
+// components: { DoughnutChart }
+
+const chartData = {
+      labels: ['Paris', 'Nîmes', 'Toulon', 'Perpignan', 'Autre'],
+      datasets: [
+        {
+          data: [30, 40, 60, 70, 5],
+          backgroundColor: ['#77CEFF', '#0079AF', '#123E6B', '#97B0C4', '#A5C8ED'],
+        },
+      ],
+    };
 </script>

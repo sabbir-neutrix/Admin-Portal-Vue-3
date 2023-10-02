@@ -13,25 +13,32 @@
             </div>
         </div>
         <hr class="my-6 md:my-10 border-b-2"/>
-        <div v-if="error">
-            Error Encountered: {{ error.message }}
+        <div v-if="errorValue">
+            Error Encountered: {{ errorValue.message }}
         </div>
-        <div v-else-if="employees" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <CardWithoutImage :employees="employees"></CardWithoutImage>
+        <div v-else-if="employeesList" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <CardWithoutImage :data="employeesList"></CardWithoutImage>
         </div>
-        <div v-else>
+        <div>
             Loading...
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, inject } from 'vue';
+import { ref, inject, onMounted } from 'vue';
 import CardWithoutImage from "../../components/common-card/CardWithoutImage.vue";
 import { useFetch } from "../../composables/api/use-api";
 
 const api = inject('api');
-const url = api.user.requestUrl;
-const { employees, error } = useFetch(url);
+const serverURL = inject('serverURL');
+const url = serverURL + api.user.requestUrl;
+const employeesList = ref([]);
+const errorValue = ref(null);
 
+onMounted(async () => {
+    const { dataList, error } = await useFetch(url);
+    employeesList.value = dataList;
+    errorValue.value = error;
+})
 </script>

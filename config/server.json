@@ -1,7 +1,6 @@
 {
-    "HOST": "https://platinum-landscape-admin.1space.co/",
-    "SERVER_HOST": "https://1space.co:7014/",
+    "HOST": "",
+    "SERVER_HOST": "",
     "STAGING_HOST":"http://localhost:5173/",
-    "STAGING_SERVER_HOST":"http://45.250.231.254:7014/",
-    "STAGING_IMAGE_URL":"http://45.250.231.254:7014/"
+    "STAGING_SERVER_HOST":"http://45.250.231.254:7007/"
 }
