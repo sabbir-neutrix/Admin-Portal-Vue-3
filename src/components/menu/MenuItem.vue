@@ -65,9 +65,9 @@ const menuItems = [
         url: "/category"
     },
     {
-        title: "Contact",
+        title: "Newsletter",
         icon: "fa-solid fa-shapes",
-        url: "/contact"
+        url: "/newsletter"
     }
 ]
 </script>

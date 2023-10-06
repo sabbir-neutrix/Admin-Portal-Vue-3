@@ -1,5 +1,5 @@
 {
-    "user": {
-        "requestUrl": "api/v1/users?userType=customer"
+    "newsletter": {
+        "requestUrl": "api/v1/newsletter"
     }
 }

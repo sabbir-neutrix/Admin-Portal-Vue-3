@@ -12,6 +12,13 @@ import api from '../config/api.json';
 app.provide('api', api);
 /* Configure the API JSON File */
 
+/* Configure Sweetalert */
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+app.use(VueSweetalert2);
+/* Configure Sweetalert */
+
 /* Configure the Moment JS */
 import moment from 'moment';
 
