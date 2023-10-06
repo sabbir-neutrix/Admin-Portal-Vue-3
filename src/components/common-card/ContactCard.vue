@@ -1,6 +1,5 @@
 <template>
-    <div v-for="(category, index) in categories" :key="index"
-        class="border rounded-md overflow-hidden bg-slate-100">
+    <div v-for="(category, index) in categories" :key="index" class="border rounded-md overflow-hidden bg-slate-100">
         <div class="flex justify-between items-center p-3">
             <div class="w-[60%]">
                 <p class="text-sm text-slate-600 mb-2">Digital Stragegist</p>
@@ -13,19 +12,27 @@
             </div>
         </div>
         <div class="flex justify-end items-center gap-2 mt-3 bg-slate-300 px-3 py-2">
+<<<<<<< HEAD
                 <!-- <button class="bg-slate-400 text-white font-medium rounded-full px-5 py-1">Edit</button>
                 <button class="bg-red-600 text-white font-medium rounded-full px-5 py-1">Delete</button> -->
                 <button class=" text-slate-600 px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-pen-to-square" /></button>
                 <button class=" text-slate-600 px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-eye" /></button>
                 <button class=" text-slate-600 px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-trash" /></button>
             </div>
+=======
+            <button class="bg-slate-600 text-white px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-pen-to-square" /></button>
+            <button class="bg-slate-600 text-white px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-eye" /></button>
+            <button class="bg-slate-600 text-white px-[6px] py-[3px] rounded text-sm"><font-awesome-icon icon="fa-solid fa-trash" /></button>
+        </div>
+>>>>>>> 96faff2f9b2290801f750347484d6c19b5fb61d7
     </div>
 </template>
 
 <script setup>
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronDown,faPenToSquare,faEye,faTrash} from '@fortawesome/free-solid-svg-icons'
-library.add(faChevronDown,faPenToSquare,faEye,faTrash)
+import { faChevronDown,faPenToSquare,faEye,faTrash} from '@fortawesome/free-solid-svg-icons';
+library.add(faChevronDown,faPenToSquare,faEye,faTrash);
+
 const props = defineProps({
     categories: {
         type: Object,

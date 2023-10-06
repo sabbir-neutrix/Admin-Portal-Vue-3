@@ -1,5 +1,5 @@
 {
-    "user": {
-        "requestUrl": "https://jsonplaceholder.typicode.com/users"
+    "newsletter": {
+        "requestUrl": "api/v1/newsletter"
     }
 }

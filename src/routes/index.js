@@ -8,6 +8,7 @@ import Service from "../pages/service/Service.vue";
 import AddService from "../pages/service/AddService.vue";
 import Contact from "../pages/contact/Contact.vue";
 import AddContact from "../pages/contact/AddContact.vue";
+import Newsletter from "../pages/newsletter/Newsletter.vue";
 
 const routes = [
     { path: "/", redirect: { name: 'Home' } },
@@ -20,6 +21,7 @@ const routes = [
     { path: "/add-service", name: "AddService", component: AddService },
     { path: "/contact", name: "Contact", component: Contact },
     { path: "/add-contact", name: "AddContact", component: AddContact },
+    { path: "/newsletter", name: "Newsletter", component: Newsletter },
 ];
 
 const router = createRouter({

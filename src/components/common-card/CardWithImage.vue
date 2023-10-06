@@ -1,8 +1,7 @@
 <template>
-    <div v-for="(category, index) in categories" :key="index"
-        class="flex justify-between items-center border rounded-md p-3">
+    <div v-for="(category, index) in categories" :key="index" class="flex justify-between items-center border rounded-md p-3">
         <div class="w-[30%]">
-            <img :src="category.image" alt="" class="w-[70px] h-[70px] object-cover rounded-full" />
+            <img :src="category.image" alt="" class="w-[70px] h-[70px] object-cover rounded-full"/>
         </div>
         <div class="w-[70%]">
             <p class="text-base md:text-xl font-semibold line-clamp-2">{{ category.title }}</p>
